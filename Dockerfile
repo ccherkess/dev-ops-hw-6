@@ -20,7 +20,7 @@ RUN ls
 RUN mvn clean package
 
 #Копируем war-файл в директорию tomcat
-RUN cd targer/
+WORKDIR targer/
 RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
 
 EXPOSE 8080
