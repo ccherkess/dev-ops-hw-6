@@ -20,7 +20,7 @@ RUN ls
 RUN mvn clean package
 
 #Копируем war-файл в директорию tomcat
-WORKDIR targer/
+WORKDIR /boxfuse-sample-java-war-hello/targer
 RUN ls
 RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
 
