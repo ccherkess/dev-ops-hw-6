@@ -15,7 +15,7 @@ RUN apt install tomcat9 -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
 #Сборка проекта
-RUN cd boxfuse-sample-java-war-hello/
+RUN cd /boxfuse-sample-java-war-hello/
 RUN ls
 RUN mvn clean package
 
