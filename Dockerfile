@@ -19,5 +19,7 @@ RUN mvn clean package
 #Копируем war-файл в директорию tomcat
 RUN cd targer/
 RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
-RUN systemctl restart tomcat9
 
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
