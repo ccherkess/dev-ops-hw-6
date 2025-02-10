@@ -15,3 +15,9 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 #Сборка проекта
 RUN cd boxfuse-sample-java-war-hello/
 RUN mvn clean package
+
+#Копируем war-файл в директорию tomcat
+RUN cd targer/
+RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
+RUN systemctl restart tomcat9
+
