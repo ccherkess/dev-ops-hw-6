@@ -5,7 +5,7 @@ RUN apt update
 
 #Устанавливаем все необходимые зависимости
 RUN apt install git -y
-RUN apt install default-jdk -y echo "Europe"
+RUN apt install default-jdk -y -y Europe
 RUN apt install maven -y
 RUN apt install tomcat9 -y
 
