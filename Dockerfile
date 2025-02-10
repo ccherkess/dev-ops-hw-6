@@ -3,9 +3,11 @@ FROM ubuntu:20.04
 #Обновляем список пакетов
 RUN apt update
 
+RUN DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install tzdata
+
 #Устанавливаем все необходимые зависимости
 RUN apt install git -y
-RUN apt install default-jdk -y -y 1
+RUN apt install default-jdk -y
 RUN apt install maven -y
 RUN apt install tomcat9 -y
 
