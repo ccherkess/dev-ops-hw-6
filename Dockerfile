@@ -21,7 +21,7 @@ RUN mvn clean package
 
 #Копируем war-файл в директорию tomcat
 WORKDIR /
-RUN ls /boxfuse-sample-java-war-hello
+RUN ls /boxfuse-sample-java-war-hello/target
 COPY /boxfuse-sample-java-war-hello/targer/hello-1.0.war /var/lib/tomcat9/webapps/
 
 EXPOSE 8080
