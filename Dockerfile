@@ -20,9 +20,10 @@ RUN mvn clean package
 
 #Копируем war-файл в директорию tomcat
 WORKDIR /boxfuse-sample-java-war-hello/target
-RUN cp hello-1.0.war /var/lib/tomcat9/webapps
+RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
 
 EXPOSE 8080
 
 RUN ln -s /etc/tomcat9 /usr/share/tomcat9/conf
+RUN ln -s /var/lib/tomcat9/webapps /usr/share/tomcat9/webapps
 CMD ["/usr/share/tomcat9/bin/catalina.sh", "run"]
